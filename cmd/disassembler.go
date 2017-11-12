@@ -700,7 +700,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 2))
 	case 0xce:
 		instruction.Code = "ACI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xcf:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "1")
@@ -723,7 +723,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Params = append(instruction.Params, "D")
 	case 0xd6:
 		instruction.Code = "SUI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xd7:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "2")
@@ -744,7 +744,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Code = "NOP"
 	case 0xde:
 		instruction.Code = "SBI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xdf:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "3")
@@ -766,7 +766,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Params = append(instruction.Params, "H")
 	case 0xe6:
 		instruction.Code = "ANI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xe7:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "4")
@@ -786,7 +786,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Code = "NOP"
 	case 0xee:
 		instruction.Code = "XRI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xef:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "5")
@@ -808,7 +808,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Params = append(instruction.Params, "PSW")
 	case 0xf6:
 		instruction.Code = "ORI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xf7:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "6")
@@ -828,7 +828,7 @@ func getInstruction(buffer *[]byte, pc int) Instruction {
 		instruction.Code = "NOP"
 	case 0xfe:
 		instruction.Code = "CPI"
-		instruction.Params = append(instruction.Params, getHexFromByte(code, pc, 1))
+		instruction.Params = append(instruction.Params, "#" + getHexFromByte(code, pc, 1))
 	case 0xff:
 		instruction.Code = "RST"
 		instruction.Params = append(instruction.Params, "7")

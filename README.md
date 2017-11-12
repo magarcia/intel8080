@@ -37,7 +37,7 @@ Run disassembler on the invaders.h ROM file.
 002b MOV 	B,D
 002e XCHG
 002f RIM
-0030 CPI 	$99
+0030 CPI 	#$99
 0032 JZ 	$003e
 0034 NOP
 0035 ADI 	#$01
