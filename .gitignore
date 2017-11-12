@@ -1,3 +1,9 @@
+/bin/
+/.gopath~/
+/vendor/
+/test/tests.*
+/test/coverage.*
+
 ### Emacs ###
 # -*- mode: gitignore; -*-
 *~
