@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/magarcia/emulator/cmd"
-	"github.com/magarcia/emulator/io"
+	"github.com/magarcia/intel8080/cmd"
+	"github.com/magarcia/intel8080/io"
 )
 
 func main() {
