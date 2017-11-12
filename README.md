@@ -3,6 +3,8 @@ Intel 8080 Emulator implemented in golang
 
 ## Disassembler
 
+[8080 reference](8080reference.md)
+
 ### Example output
 Run disassembler on the invaders.h ROM file.
 
