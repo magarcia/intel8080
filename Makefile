@@ -33,6 +33,14 @@ clean: ; $(info $(M) cleanning) @ ## Clean builds
 test: ; $(info $(M) running tests) @ ## Run tests
 	$Q echo "\tNot implemented yet"
 
+.PHONY: lint
+lint: ; $(info $(M) running lint) @ ## Run lint
+	$Q echo "\tNot implemented yet"
+
+.PHONY: vendor
+vendor: ; $(info $(M) installing dependencies) @ ## Install dependencies
+	$Q dep ensure
+
 .PHONY: help
 help: ; @ ## Show this help
 	$Q grep -E '^[ a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \

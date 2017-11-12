@@ -57,3 +57,14 @@ Run disassembler on the invaders.h ROM file.
 0000030 fe 99 ca 3e 00 c6 01 27 32 eb 20 cd 47 19 af 32
 */
 ```
+
+## Usage
+The following commands are available:
+
+* `make help` to get help
+* `make` to build the binary (in bin/)
+* `make test` to run tests
+* `make vendor` to retrieve dependencies
+* `make lint` to run golint
+* `make fmt` to run gofmt
+* `make clean`
