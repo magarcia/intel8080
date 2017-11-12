@@ -1,9 +1,12 @@
 package main
 
 import (
-	"github.com/magarcia/intel8080/cmd"
 	"github.com/magarcia/intel8080/io"
 )
+
+func emulate(bytes []byte) {
+
+}
 
 func main() {
 	rom, err := io.LoadROM("invaders/invaders.h")
@@ -11,5 +14,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	cmd.Disassembler(rom, false, true)
+	emulate(rom)
 }

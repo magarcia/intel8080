@@ -1,16 +1,10 @@
-package cmd
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/magarcia/intel8080/io"
+)
 
-// Usage:
-//
-//   rom, err := io.LoadROM("invaders/invaders.h")
-//
-//   if err != nil {
-//       panic(err)
-//   }
-//	 hexdump(rom)
-//
 func hexdump(rom []byte) {
 
 	for i, element := range rom {
@@ -23,4 +17,13 @@ func hexdump(rom []byte) {
 		}
 	}
 	fmt.Printf("\n")
+}
+
+func main() {
+	rom, err := io.LoadROM("invaders/invaders.h")
+
+	if err != nil {
+		panic(err)
+	}
+	hexdump(rom)
 }

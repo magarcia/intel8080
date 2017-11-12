@@ -1,8 +1,8 @@
 package io
 
 import (
-	"os"
 	"bufio"
+	"os"
 )
 
 func LoadROM(filename string) ([]byte, error) {
