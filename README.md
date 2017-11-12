@@ -1,6 +1,22 @@
 # 8080
 Intel 8080 Emulator implemented in golang
 
+## Table of Contents
+  * [Usage](#usage)
+  * [Disassembler](#disassembler)
+     * [Example output](#example-output)
+
+## Usage
+The following commands are available:
+
+* `make help` to get help
+* `make` to build the binary (in bin/)
+* `make test` to run tests
+* `make vendor` to retrieve dependencies
+* `make lint` to run golint
+* `make fmt` to run gofmt
+* `make clean`
+
 ## Disassembler
 
 [8080 reference](8080reference.md)
@@ -57,14 +73,3 @@ Run disassembler on the invaders.h ROM file.
 0000030 fe 99 ca 3e 00 c6 01 27 32 eb 20 cd 47 19 af 32
 */
 ```
-
-## Usage
-The following commands are available:
-
-* `make help` to get help
-* `make` to build the binary (in bin/)
-* `make test` to run tests
-* `make vendor` to retrieve dependencies
-* `make lint` to run golint
-* `make fmt` to run gofmt
-* `make clean`
